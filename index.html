@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EOS 导航">
+    <meta name="author" content="一个收录 EOS 网址的导航">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>EOS 导航</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="public/components/aos/dist/aos.css" rel="stylesheet">
+    <link href="public/css/app.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44004176-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-44004176-1');
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="https://www.eos123.com/" class="navbar-brand d-flex align-items-center">
+            <img src="https://d340lr3764rrcr.cloudfront.net/Images/EOS_spinning_logo.gif" height="40" alt="">
+            <span>EOS 导航</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">EOS 导航</h1>
+          <p class="lead"> 一个收录 EOS 网址的导航 </p>
+        </div>
+      </section>
+      <div class="album py-5 bg-light">
+        <div id="content" class="container">
+        </div>
+      </div>
+    </main>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="/">返回首页</a>
+        </p>
+        <p>
+          &copy;
+          <script>
+              document.write(new Date().getFullYear())
+          </script>
+          <a href="https://www.eos123.com/">EOS 导航</a>
+        </p>
+        <p>取得联系：&#109;&#105;&#110;&#103;&#102;&#117;&#110;&#46;&#119;&#111;&#110;&#103;&#46;&#99;&#104;&#110;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</p>
+      </div>
+    </footer>
+    <script id="tpl-site" type="text/html">
+        <div class="row">
+          <div class="col-md-2">
+            {{ each news }}
+              <h3><p> <i class="{{ $value.icon }}"></i> {{ $value.name }} </p></h3>
+              <ul class="list-unstyled mb-4">
+                {{ each $value.child }}
+                <li>
+                  <p><a href="{{ $value.url }}" target="_blank">{{ $value.name }}</a></p>
+                </li>
+                {{/each}}
+              </ul>
+            {{/each}}
+          </div>
+          
+          <div class="col-md-10">
+            {{ each site }}
+              <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                  <h3><p> <i class="{{ $value.icon }}"></i> {{ $value.name }} </p></h3>
+                </div>
+              </div>
+              <div class="row mb-4">
+                {{ each $value.child }}
+                <div class="col-md-4" data-aos="fade-up">
+                  <a href="{{ $value.url }}" target="_blank" class="site-card">
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-body row">
+                          <div class="col-5 card-img">
+                            <img src="{{ $value.img }}" alt="{{ $value.name }}">
+                          </div>
+                          <div class="col-7 card-desc">
+                            <b class="card-text">{{ $value.name }}</b>
+                            <p class="card-text">{{ $value.desc }}</p>
+                          </div>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                {{/each}}
+              </div>
+            {{/each}}
+          </div>
+        </div>
+    </script>
+    <script src="public/components/aos/dist/aos.js"></script>
+    <script>
+        document.write("<script type='text/javascript' src='data.js?rand=" + Math.random() + "'><\/script>");
+    </script>
+    <script src="public/components/template-web.js"></script>
+    <script src="public/js/app.js"></script>
+  </body>
+</html>

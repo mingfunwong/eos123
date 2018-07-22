@@ -1,0 +1,6 @@
+{
+  "name": "web",
+  "dependencies": {
+    "aos": "^2.2.0"
+  }
+}
