@@ -7,7 +7,7 @@
     <meta name="author" content="一个收录 EOS 网址的导航">
     <link rel="icon" type="image/png" href="/favicon.png">
     <title>EOS 导航</title>
-    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href="public/components/aos/dist/aos.css" rel="stylesheet">
     <link href="public/css/app.css" rel="stylesheet">
@@ -61,20 +61,7 @@
     </footer>
     <script id="tpl-site" type="text/html">
         <div class="row">
-          <div class="col-md-2">
-            {{ each news }}
-              <h3><p> <i class="{{ $value.icon }}"></i> {{ $value.name }} </p></h3>
-              <ul class="list-unstyled mb-4">
-                {{ each $value.child }}
-                <li>
-                  <p><a href="{{ $value.url }}" target="_blank">{{ $value.name }}</a></p>
-                </li>
-                {{/each}}
-              </ul>
-            {{/each}}
-          </div>
-          
-          <div class="col-md-10">
+          <div class="col-md-12">
             {{ each site }}
               <div class="row">
                 <div class="col-md-12" data-aos="fade-up">
@@ -83,7 +70,7 @@
               </div>
               <div class="row mb-4">
                 {{ each $value.child }}
-                <div class="col-md-4" data-aos="fade-up">
+                <div class="col-md-3" data-aos="fade-up">
                   <a href="{{ $value.url }}" target="_blank" class="site-card">
                     <div class="card mb-4 box-shadow">
                         <div class="card-body row">
