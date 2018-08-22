@@ -30,7 +30,7 @@ var data = {
       icon: "fas fa-child",
       name: "周边站点",
       child: [
-        {name: "神思导航", desc: "EOS 生态工具和资讯导", url: "https://www.shensi.com/", img: "thumb/shensi.com.jpg"},
+        {name: "神思导航", desc: "EOS 生态工具和资讯导航", url: "https://www.shensi.com/", img: "thumb/shensi.com.jpg"},
         {name: "IMEOS.ONE", desc: "EOS 生态资讯先锋门户", url: "https://imeos.one/", img: "thumb/imeos.one.png"},
         {name: "EOS Channel", desc: "专注于 EOS 资讯与技术", url: "http://www.eoschannel.com/", img: "thumb/eoschannel.com.jpg"},
         {name: "EOS 原力区", desc: "技术社区", url: "https://eostalk.one/", img: "thumb/eostalk.one.jpg"},
