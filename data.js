@@ -40,7 +40,6 @@ var data = {
         {name: "引力区", desc: "区块链生态社群", url: "http://eosfans.one/", img: "thumb/eosfans.one.jpg"},
         {name: "EOS Drops", desc: "EOS 糖果空投列表", url: "https://www.eosdrops.io/", img: "thumb/eosdrops.io.jpg"},
         {name: "币问", desc: "区块链第一知识站", url: "https://www.bitask.org/topic/EOS", img: "thumb/bitask.org!topic!EOS.jpg"},
-        {name: "币乎", desc: "垂直社区平台", url: "https://bihu.com/?category=hots&code=EOS", img: "https://bihu.com/static/media/logo.81b9b93e.png"},
       ]
     },
     {
